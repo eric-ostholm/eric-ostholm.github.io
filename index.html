@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Display</title>
+    <title>tjena gullet</title>
     <style>
         * {
             margin: 0;
@@ -57,10 +57,10 @@
             transform: scale(1.02);
         }
         
-        .image-info {
+        .error-message {
+            color: #e74c3c;
             margin-top: 20px;
-            color: #666;
-            font-size: 0.9rem;
+            display: none;
         }
         
         @media (max-width: 768px) {
@@ -76,20 +76,14 @@
 </head>
 <body>
     <div class="container">
-        <h1>Image Display</h1>
+        <h1>tjena gullet</h1>
         <div class="image-wrapper">
-            <img src="https://files.slack.com/files-tmb/T02T2AH0X-F08TMTW7QE8-0a7d3421d8/ska__rmavbild_2025-05-22_kl._13.37.56_480.png" 
-                 alt="Screenshot from 2025-05-22" 
+            <img src="image.png" 
+                 alt="tjena gullet" 
                  onerror="this.style.display='none'; document.querySelector('.error-message').style.display='block';">
         </div>
-        <div class="image-info">
-            <p>Screenshot taken on May 22, 2025 at 13:37:56</p>
-        </div>
-        <div class="error-message" style="display: none; color: #e74c3c; margin-top: 20px;">
-            <p>⚠️ Image could not be loaded. This might be due to access restrictions on the Slack file.</p>
-            <p style="margin-top: 10px; font-size: 0.8rem;">
-                Note: Slack file URLs often require authentication and may not be publicly accessible.
-            </p>
+        <div class="error-message">
+            <p>⚠️ Image could not be loaded. Make sure image.png exists in the same directory as this HTML file.</p>
         </div>
     </div>
 </body>
