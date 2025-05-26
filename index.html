@@ -1,90 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>tjena gullet</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-        
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .container {
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        padding: 40px;
+        max-width: 800px;
+        width: 100%;
+        text-align: center;
+      }
+
+      h1 {
+        color: #333;
+        margin-bottom: 30px;
+        font-size: 2.5rem;
+        font-weight: 300;
+      }
+
+      .image-wrapper {
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        margin: 0 auto;
+        display: inline-block;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        transition: transform 0.3s ease;
+      }
+
+      img:hover {
+        transform: scale(1.02);
+      }
+
+      .error-message {
+        color: #e74c3c;
+        margin-top: 20px;
+        display: none;
+      }
+
+      @media (max-width: 768px) {
         .container {
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            padding: 40px;
-            max-width: 800px;
-            width: 100%;
-            text-align: center;
+          padding: 20px;
         }
-        
+
         h1 {
-            color: #333;
-            margin-bottom: 30px;
-            font-size: 2.5rem;
-            font-weight: 300;
+          font-size: 2rem;
         }
-        
-        .image-wrapper {
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            margin: 0 auto;
-            display: inline-block;
-        }
-        
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            transition: transform 0.3s ease;
-        }
-        
-        img:hover {
-            transform: scale(1.02);
-        }
-        
-        .error-message {
-            color: #e74c3c;
-            margin-top: 20px;
-            display: none;
-        }
-        
-        @media (max-width: 768px) {
-            .container {
-                padding: 20px;
-            }
-            
-            h1 {
-                font-size: 2rem;
-            }
-        }
+      }
     </style>
-</head>
-<body>
-    <div class="container">
-        <h1>tjena gullet</h1>
-        <div class="image-wrapper">
-            <img src="image.png" 
-                 alt="tjena gullet" 
-                 onerror="this.style.display='none'; document.querySelector('.error-message').style.display='block';">
-        </div>
-        <div class="error-message">
-            <p>⚠️ Image could not be loaded. Make sure image.png exists in the same directory as this HTML file.</p>
-        </div>
-    </div>
-</body>
+  </head>
+  <body>
+    <iframe
+      src="http://localhost:3060/1u5bbc676dbbbe4df2827550a2011bfd79-frame"
+      width="360"
+      height="1065"
+      style="border: 0"
+    ></iframe>
+  </body>
 </html>
